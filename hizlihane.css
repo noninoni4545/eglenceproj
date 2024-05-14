@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radio+Canada+Big:ital,wght@0,400..700;1,400..700&family=Space+Grotesk:wght@300..700&display=swap');
+body {
+  font-family: "Archivo Black", sans-serif;
+}
+
+body {
+  background-color: rgb(6, 4, 17);
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.video-container {
+    width: 200px; /* İstenilen genişlik değeri */
+    height: 100px; /* İstenilen yükseklik değeri */
+    z-index: 1;
+  }
+
+  .video-container {
+    width: 100%; /* Genişliği içerik alanına sığacak şekilde ayarlar */
+    padding-top: 34.25%; /* 16:9 en-boy oranında bir video için genişliğin 9'unun 16'sı kadar bir yükseklik */
+    position: relative; /* Mutlaka gereklidir */
+    margin-top: 20px;
+    z-index: 1;
+  }
+  
+  .video-container video {
+    position: absolute; /* Mutlaka gereklidir */
+    width: 100%; /* Videoyu konteynere sığacak şekilde ayarlar */
+    height: auto; /* Videoyu konteynere sığacak şekilde ayarlar */
+    top: 0; /* Videoyu konteynerin üstüne hizalar */
+    left: 0; /* Videoyu konteynerin soluna hizalar */
+    z-index: 1;
+  }
+  
+  .video-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Sadece bir sütun */
+    grid-row-gap: 0; /* Videolar arasındaki boşluk */
+    z-index: 1;
+  }
+  
+  .video-item {
+    position: relative; /* Göreceli pozisyon */
+    z-index: 1;
+  }
+  
+  .video-item video {
+    width: 22%; /* Videoları konteynere sığacak şekilde ayarlar */
+    height: auto; /* Genişliğe göre orantılı olarak yükseklik ayarlanır */
+    margin-left: 500px;
+    margin-top: 40px;
+    border-radius: 8px;
+    z-index: 1;
+    
+  }
+
+/* icons */
+.video-item-buttons .bi-hand-thumbs-up-fill {
+    background-color: rgb(93, 93, 93);
+     color: white;
+     margin-left: 730px;
+     position: relative; /* Göreceli konumlandırma */
+     top: -330px; /* Yukarı taşımak için negatif bir değer kullanabilirsiniz */
+     padding-top: 8px;
+     padding-left: 8px;
+     padding: 8px;
+     border-radius: 100px;
+     font-size: 25px;
+     z-index: 5;
+     cursor: pointer;
+     transition: 0.1s all
+     }
+
+ .video-item-buttons .bi-hand-thumbs-up-fill:hover{
+    background-color: rgba(93, 93, 93, 0.8); /* Renk biraz daha açık olacak */    
+}
+
+.video-item-buttons .bi-hand-thumbs-up-fill.active {
+    background-color: white; /* Arka plan beyaz olacak */
+    color: black; /* İkon siyah olacak */
+
+}
+
+
+.video-item-buttons  .bi-hand-thumbs-down-fill{
+    background-color: rgb(93, 93, 93);
+     color: white;
+     margin-left: 730px;
+     position: relative; /* Göreceli konumlandırma */
+     top: -290px; /* Yukarı taşımak için negatif bir değer kullanabilirsiniz */
+     padding-top: 8px;
+     padding-left: 8px;
+     padding: 8px;
+     border-radius: 100px;
+     font-size: 25px;
+     z-index: 5;
+     cursor: pointer;
+     transition: 0.1s all
+ }
+
+ .video-item-buttons .bi-hand-thumbs-down-fill:hover{
+    background-color: rgba(93, 93, 93, 0.8); /* Renk biraz daha açık olacak */
+}
+
+.video-item-buttons  .bi-chat-right-text-fill{
+    background-color: rgb(93, 93, 93);
+     color: white;
+     margin-left: 730px;
+     position: relative; /* Göreceli konumlandırma */
+     top: -250px; /* Yukarı taşımak için negatif bir değer kullanabilirsiniz */
+     padding-top: 8px;
+     padding-left: 8px;
+     padding: 8px;
+     border-radius: 100px;
+     font-size: 25px;
+     z-index: 5;
+     cursor: pointer;
+     transition: 0.1s ease-in-out
+ }
+
+ .video-item-buttons .bi-chat-right-text-fill:hover {
+    background-color: rgba(93, 93, 93, 0.8); /* Renk biraz daha açık olacak */
+}
+
+.video-item-buttons  .bi-plus-circle-fill{
+    background-color: rgb(93, 93, 93);
+     color: white;
+     margin-left: 730px;
+     position: relative; /* Göreceli konumlandırma */
+     top: -210px; /* Yukarı taşımak için negatif bir değer kullanabilirsiniz */
+     padding-top: 8px;
+     padding-left: 8px;
+     padding: 8px;
+     border-radius: 100px;
+     font-size: 25px;
+     z-index: 5;
+     cursor: pointer;
+     transition: 0.1s ease-in-out
+ }
+
+ .video-item-buttons .bi-plus-circle-fill:hover {
+    background-color: rgba(93, 93, 93, 0.8); /* Renk biraz daha açık olacak */
+}
+
+ .video-item-buttons  .bi-play-circle-fill{
+    background-color: rgb(93, 93, 93);
+     color: white;
+     margin-left: 730px;
+     position: relative; /* Göreceli konumlandırma */
+     top: -170px; /* Yukarı taşımak için negatif bir değer kullanabilirsiniz */
+     padding-top: 8px;
+     padding-left: 8px;
+     padding: 8px;
+     border-radius: 100px;
+     font-size: 25px;
+     z-index: 5;
+     cursor: pointer;
+     transition: 0.1s all ease
+ }
+
+ .video-item-buttons .bi-play-circle-fill:hover {
+    background-color: rgba(93, 93, 93, 0.8); /* Renk biraz daha açık olacak */
+}
+
+.video-item-tittle2 {
+    color: blueviolet;
+    margin-left: 730px;
+    margin-top: -100px;
+    position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-100%);
+}
+  
+  
+
+
+/*! navpar start  */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0);
+  height: 60px;
+  color: rgb(255, 255, 255);
+  position: fixed; /* Değişiklik burada, sayfanın en üstüne sabitlenmiş olacak */
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: backgorund-color 0.3s ease;
+  z-index: 3;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 0 50px;
+}
+
+.logo {
+  width: 240px;
+  color: rgb(91, 152, 233);
+  margin-left: -22px;
+  margin-top: 19px;
+}
+
+.menu-list {
+  color: white;
+  display: flex;
+  list-style: none;
+  column-gap: 25px;
+  padding: 0;
+  z-index: 5;
+  margin-top: 28px;
+  margin-left: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  text-shadow: 1px 1px 10px #000;
+  text-decoration: none;
+  font-family: "Asap";
+}
+
+.menu-list a:nth-child(5) {
+  color: rgb(81, 139, 255);
+  font-weight: bold;
+}
+
+
+.menu-list .active{
+  color: rgb(91, 152, 233,);
+}
+
+.search-main {
+  background-color: #5f5f5f98;
+  height: 10px;
+  width: 595px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 20px;
+  margin-left: 540px;
+  margin-top: -28px;
+  z-index: 3;
+  box-shadow: 1px 3px 13px #000000;
+  backdrop-filter: blur(20px);
+}
+
+  .tbox-search {
+    float: left;
+    background: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    width: 0;
+    transition: width 0.3s ease-in;
+  }
+
+  .btn-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    float: right;
+    width: 50px;
+    height: 70px;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+
+  .tbox-search:hover {
+    background: none;
+  }
+
+  .search-main:hover > .tbox-search {
+    width: 590px;
+    background: none;
+    transition: width 0.2s ease-in-out;
+  }
+
+.menu-list-item {
+  cursor: pointer;
+  text-decoration: none;
+}
+.menu-list-item:hover {
+  font-weight: bold;
+  color: rgb(81, 139, 255);
+  transition: 0.2s ease all;
+}
+
+.menu-list-item.active {
+  color: rgb(37, 146, 255);
+  font-weight: bold;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  
+  text-shadow:#000 1px 1px 10px;
+}
+
+.profile-picture {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 16px;
+  margin-right: 40px;
+}
+
+.profile-text-container {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-size: 16px;
+ margin-right: 28px;
+ margin-top: 25px;
+ font-family: "Radio Canada Big";
+}
+
+.toggle {
+  width: 53px;
+  height: 27px;
+  background-color: white;
+  position: relative;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  top: 10px;
+ margin-right: 17px;
+}
+
+.toggle-icon {
+  color: goldenrod;
+  font-size: 20px;
+  margin-left: -5px;
+}
+
+.toggle-ball {
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 1px;
+  transition: ease-in 0.5s;
+  z-index: 2;
+}
+
+/*! navpar end  */
+
+
+
+
+
+::-webkit-scrollbar {
+  background: #2f2f2f;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2044;
+  border-radius: 6px;
+  width: 10px; /* Örnek olarak scrollbar genişliğinden 2px daha az olarak ayarlandı */
+  box-shadow: inset 0 0 0px 2px #2f2f2f; /* Scrollbar thumb'unun iç kısmına iç gölge uygulayan kod */
+
+}
